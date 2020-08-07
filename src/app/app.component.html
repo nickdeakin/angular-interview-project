@@ -1,0 +1,12 @@
+<div style="text-align:center">
+  <h1>
+    Angular Technical Test!
+  </h1>
+</div>
+
+<div id="cat-breeds">
+  <div *ngFor="let breed of catBreeds$ | async">
+    <app-cat-card [catBreed]="breed"></app-cat-card>
+  </div>
+</div>
+
