@@ -22,8 +22,6 @@ export class AppComponent implements OnInit {
 
   initData() {
     this.catBreeds$ = this.appService.getBreeds().pipe();
-
-    this.catBreeds$ = this.appService.getBreeds().subscribe(items = > xxxx);
   }
 
 }
