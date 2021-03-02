@@ -1,6 +1,17 @@
 <div class="cat-card">
-  Name: {{ catBreed.name }}
-  Origin: {{ catBreed.origin }}
-  Life span: {{ catBreed.life_span }}
-  <a [href]="catBreed.wikipedia_url" target="_blank">More information</a>
+  <div class="cat-card--row">
+    <span class="cat-card--strong">Name:</span>
+    {{ catBreed.name }}
+  </div>
+  <div class="cat-card--row">
+    <span class="cat-card--strong">Origin:</span>
+    {{ catBreed.origin }}
+  </div>
+  <div class="cat-card--row">
+    <span class="cat-card--strong">Life span:</span>
+    {{ catBreed.life_span }}
+  </div>
+  <div class="cat-card--link">
+    <a [href]="catBreed.wikipedia_url" target="_blank">More information</a>
+  </div>
 </div>

@@ -1,7 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CatBreedDefinition} from './interfaces/cat-breeds';
 import {AppService} from './services/app.service';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,7 @@ import {Observable} from 'rxjs';
 export class AppComponent implements OnInit {
   title = 'angular-interview-project';
 
-  catBreeds$: Observable<CatBreedDefinition[]>;
+  catBreeds: CatBreedDefinition[];
 
   constructor(private appService: AppService) {
   }
@@ -21,7 +20,7 @@ export class AppComponent implements OnInit {
   }
 
   initData() {
-    this.catBreeds$ = this.appService.getBreeds().pipe();
+    this.appService.getBreeds().subscribe(items => this.catBreeds = items);
   }
 
 }
